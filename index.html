@@ -389,7 +389,7 @@
 
                 <div class="form-group">
                     <label for="email">Email Address <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="john@abctrucking.com">
+                    <input type="text" id="email" name="email" required placeholder="john@abctrucking.com">
                     <p class="field-hint">We'll send your personalized quote to this email</p>
                 </div>
 
@@ -428,6 +428,7 @@
             const formData = {
                 contactName: document.getElementById('contactName').value,
                 companyName: document.getElementById('companyName').value,
+                email: document.getElementById('email').value,
                 mcDot: document.getElementById('mcDot').value,
                 currentFactoring: document.getElementById('currentFactoring').value,
                 tellUsMore: document.getElementById('tellUsMore').value,
