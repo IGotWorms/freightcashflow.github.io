@@ -345,7 +345,7 @@
 
         <section class="value-props">
             <h2>How Freight Cashflow Works</h2>
-            <p class="value-subtitle">Cashflow that keeps your trucks moving.</p>
+            <p class="value-subtitle">We broker, you save — It's that simple</p>
             <div class="benefits-grid">
                 <div class="benefit-item">
                     <div class="benefit-icon">$</div>
@@ -357,7 +357,7 @@
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon">🤝</div>
-                    <div class="benefit-text">Our deal volume is your leverage into a better rate!</div>
+                    <div class="benefit-text">We Broker the Best Factoring Relationships</div>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon">⚡</div>
@@ -376,43 +376,45 @@
                 ✅ Thank you! Your quote request has been submitted. We'll contact you within 24 hours with competitive factoring options.
             </div>
 
-            <form id="factoringForm">
+            <form id="factoringForm" action="https://docs.google.com/forms/d/e/1FAIpQLScIlXVAVg8JtX4Uqgmdf1JPRSWEm6DPZ4EwPFEkzDsKPAqONQ/formResponse" method="POST" target="hidden_iframe">
                 <div class="form-group">
                     <label for="contactName">Contact Name <span class="required">*</span></label>
-                    <input type="text" id="contactName" name="contactName" required placeholder="John Smith">
+                    <input type="text" id="contactName" name="entry.432484930" required placeholder="John Smith">
                 </div>
 
                 <div class="form-group">
                     <label for="companyName">Company Name <span class="required">*</span></label>
-                    <input type="text" id="companyName" name="companyName" required placeholder="ABC Trucking LLC">
+                    <input type="text" id="companyName" name="entry.1614052124" required placeholder="ABC Trucking LLC">
                 </div>
 
                 <div class="form-group">
-                    <label for="text">Email Address <span class="required">*</span></label>
-                    <input type="text" id="email" name="email" required placeholder="john@abctrucking.com">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="text" id="email" name="entry.997490267" required placeholder="john@abctrucking.com">
                     <p class="field-hint">We'll send your personalized quote to this email</p>
                 </div>
 
                 <div class="form-group">
                     <label for="mcDot">MC or DOT Number <span class="required">*</span></label>
-                    <input type="text" id="mcDot" name="mcDot" required placeholder="MC-123456 or DOT-789012">
+                    <input type="text" id="mcDot" name="entry.218324892" required placeholder="MC-123456 or DOT-789012">
                     <p class="field-hint">Enter your Motor Carrier or Department of Transportation number</p>
                 </div>
 
                 <div class="form-group">
                     <label for="currentFactoring">Current Factoring Company</label>
-                    <input type="text" id="currentFactoring" name="currentFactoring" placeholder="Leave blank if not currently factoring">
-                    <p class="field-hint">We'll show you how much you can save</p>
+                    <input type="text" id="currentFactoring" name="entry.141783620" placeholder="Leave blank if not currently factoring">
+                    <p class="field-hint">We'll show you how much you can save with our broker network</p>
                 </div>
 
                 <div class="form-group">
                     <label for="tellUsMore">Tell Us About Your Business <span class="required">*</span></label>
-                    <textarea id="tellUsMore" name="tellUsMore" required placeholder="Please share details about your operation: average monthly invoice volume, number of trucks, typical lane types, current factor rate (if applicable), and what you're looking for in a factoring partner..."></textarea>
+                    <textarea id="tellUsMore" name="entry.1791543838" required placeholder="Please share details about your operation: average monthly invoice volume, number of trucks, typical lane types, current factor rate (if applicable), and what you're looking for in a factoring partner..."></textarea>
                     <p class="field-hint">Include monthly invoice volume, fleet size, and any specific requirements</p>
                 </div>
 
                 <button type="submit" class="submit-btn">Get Free Quote Now</button>
             </form>
+            
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         </section>
 
         <footer class="footer">
@@ -423,29 +425,18 @@
 
     <script>
         document.getElementById('factoringForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = {
-                contactName: document.getElementById('contactName').value,
-                companyName: document.getElementById('companyName').value,
-                email: document.getElementById('email').value,
-                mcDot: document.getElementById('mcDot').value,
-                currentFactoring: document.getElementById('currentFactoring').value,
-                tellUsMore: document.getElementById('tellUsMore').value,
-                timestamp: new Date().toISOString()
-            };
-            
-            console.log('Form submitted:', formData);
-            
-            document.getElementById('successMessage').style.display = 'block';
-            
-            this.reset();
-            
-            setTimeout(() => {
-                document.getElementById('successMessage').style.display = 'none';
-            }, 6000);
-            
-            document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
+            // Let the form submit naturally to Google Forms
+            // Show success message after a brief delay
+            setTimeout(function() {
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('factoringForm').reset();
+                document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
+                
+                // Hide success message after 6 seconds
+                setTimeout(() => {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 6000);
+            }, 1000);
         });
     </script>
 </body>
