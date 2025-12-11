@@ -10,11 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -204,9 +200,7 @@
             letter-spacing: 0.5px;
         }
 
-        .form-group {
-            margin-bottom: 30px;
-        }
+        .form-group { margin-bottom: 30px; }
 
         label {
             display: block;
@@ -217,13 +211,9 @@
             font-family: 'Inter', sans-serif;
         }
 
-        .required {
-            color: #ef4444;
-            margin-left: 4px;
-        }
+        .required { color: #ef4444; margin-left: 4px; }
 
-        input[type="text"],
-        textarea {
+        input[type="text"], textarea {
             width: 100%;
             padding: 16px 18px;
             border: 2px solid #cbd5e0;
@@ -235,8 +225,7 @@
             font-weight: 500;
         }
 
-        input[type="text"]:focus,
-        textarea:focus {
+        input[type="text"]:focus, textarea:focus {
             outline: none;
             border-color: #667eea;
             box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
@@ -277,10 +266,6 @@
             box-shadow: 0 15px 35px rgba(255, 107, 53, 0.5);
         }
 
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
         .footer {
             background: #0f172a;
             color: #94a3b8;
@@ -289,10 +274,7 @@
             font-size: 0.95em;
         }
 
-        .footer strong {
-            color: #e2e8f0;
-            font-size: 1.1em;
-        }
+        .footer strong { color: #e2e8f0; font-size: 1.1em; }
 
         .success-message {
             display: none;
@@ -308,75 +290,60 @@
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2em;
-            }
-
-            .header {
-                padding: 50px 20px;
-                min-height: 350px;
-            }
-
-            .form-section,
-            .value-props {
-                padding: 30px 20px;
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .free-badge {
-                font-size: 1.1em;
-                padding: 10px 25px;
-            }
+            h1 { font-size: 2.2em; }
+            .header { padding: 50px 20px; min-height: 350px; }
+            .form-section, .value-props { padding: 30px 20px; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .free-badge { font-size: 1.1em; padding: 10px 25px; }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
+
         <header class="header">
             <div class="header-content">
                 <div class="free-badge">100% FREE SERVICE</div>
                 <h1>Get Better Factoring Rates</h1>
-                <p class="subtitle">Freight Cashflow brokers factoring relationships and negotiates <strong>discounted rates through volume</strong>. We connect you with top factoring companies at lower fees—at absolutely zero cost to you.</p>
+                <p class="subtitle">
+                    Freight Cashflow brokers factoring relationships and negotiates <strong>discounted rates through volume</strong>. 
+                    We connect you with top factoring companies at lower fees—at absolutely zero cost to you.
+                </p>
             </div>
         </header>
 
         <section class="value-props">
             <h2>How Freight Cashflow Works</h2>
             <p class="value-subtitle">We broker, you save — It's that simple</p>
+
             <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">$</div>
-                    <div class="benefit-text">Lower Factor Fees Through Volume Discounts</div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <div class="benefit-text">100% Free – Zero Cost to You</div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🤝</div>
-                    <div class="benefit-text">We Broker the Best Factoring Relationships</div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">⚡</div>
-                    <div class="benefit-text">Fast Quotes & Quick Approvals</div>
-                </div>
+                <div class="benefit-item"><div class="benefit-icon">$</div><div class="benefit-text">Lower Factor Fees Through Volume Discounts</div></div>
+                <div class="benefit-item"><div class="benefit-icon">✓</div><div class="benefit-text">100% Free – Zero Cost to You</div></div>
+                <div class="benefit-item"><div class="benefit-icon">🤝</div><div class="benefit-text">We Broker the Best Factoring Relationships</div></div>
+                <div class="benefit-item"><div class="benefit-icon">⚡</div><div class="benefit-text">Fast Quotes & Quick Approvals</div></div>
             </div>
         </section>
 
         <section class="form-section">
+
             <div class="form-intro">
                 <strong>Get Your FREE Factoring Quote</strong>
-                Submit your information below and we'll connect you with top factoring companies offering discounted rates. No obligations, no hidden fees—just better factoring deals for your trucking business.
+                Submit your information below and we'll connect you with top factoring companies offering discounted rates. 
+                No obligations, no hidden fees—just better factoring deals for your trucking business.
             </div>
 
             <div class="success-message" id="successMessage">
                 ✅ Thank you! Your quote request has been submitted. We'll contact you within 24 hours with competitive factoring options.
             </div>
 
-            <form id="factoringForm" action="https://docs.google.com/forms/d/e/1FAIpQLScIlXVAVg8JtX4Uqgmdf1JPRSWEm6DPZ4EwPFEkzDsKPAqONQ/formResponse" target="hidden_iframe" onsubmit="return false;">
+            <!-- ⭐ FIXED FORM ⭐ -->
+            <form id="factoringForm"
+                  action="https://docs.google.com/forms/d/e/1FAIpQLScIlXVAVg8JtX4Uqgmdf1JPRSWEm6DPZ4EwPFEkzDsKPAqONQ/formResponse"
+                  method="POST"
+                  target="hidden_iframe"
+                  onsubmit="submitted = true;">
+
                 <div class="form-group">
                     <label for="contactName">Contact Name <span class="required">*</span></label>
                     <input type="text" id="contactName" name="entry.432484930" required placeholder="John Smith">
@@ -390,78 +357,56 @@
                 <div class="form-group">
                     <label for="email">Email Address <span class="required">*</span></label>
                     <input type="text" id="email" name="entry.900523489" required placeholder="john@abctrucking.com">
-                    <p class="field-hint">We'll send your personalized quote to this email</p>
                 </div>
 
                 <div class="form-group">
                     <label for="mcDot">MC or DOT Number <span class="required">*</span></label>
                     <input type="text" id="mcDot" name="entry.218324892" required placeholder="MC-123456 or DOT-789012">
-                    <p class="field-hint">Enter your Motor Carrier or Department of Transportation number</p>
                 </div>
 
                 <div class="form-group">
                     <label for="currentFactoring">Current Factoring Company</label>
                     <input type="text" id="currentFactoring" name="entry.141783620" placeholder="Leave blank if not currently factoring">
-                    <p class="field-hint">We'll show you how much you can save with our broker network</p>
                 </div>
 
                 <div class="form-group">
                     <label for="tellUsMore">Tell Us About Your Business <span class="required">*</span></label>
-                    <textarea id="tellUsMore" name="entry.1791543838" required placeholder="Please share details about your operation: average monthly invoice volume, number of trucks, typical lane types, current factor rate (if applicable), and what you're looking for in a factoring partner..."></textarea>
-                    <p class="field-hint">Include monthly invoice volume, fleet size, and any specific requirements</p>
+                    <textarea id="tellUsMore" name="entry.1791543838" required placeholder="Please share details about your operation..."></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn">Get Free Quote Now</button>
             </form>
-            
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload=""></iframe>
+
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
         </section>
 
         <footer class="footer">
             <p><strong>Freight Cashflow</strong> – Your FREE Factoring Broker</p>
-            <p style="margin-top: 12px;">We negotiate better rates so you keep more money on every load.<br>Serving motor carriers, owner-operators, and freight companies nationwide.</p>
+            <p style="margin-top: 12px;">
+                We negotiate better rates so you keep more money on every load.<br>
+                Serving motor carriers, owner-operators, and freight companies nationwide.
+            </p>
         </footer>
     </div>
 
+    <!-- ⭐ FIXED MOBILE-SAFE SUBMISSION SCRIPT ⭐ -->
     <script>
         let submitted = false;
-        
-        document.getElementById('factoringForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
+
+        document.getElementById('hidden_iframe').onload = function () {
             if (submitted) {
-                return false;
-            }
-            
-            submitted = true;
-            
-            // Submit the form to Google Forms
-            const formData = new FormData(this);
-            
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors'
-            }).then(() => {
-                // Show success message
                 document.getElementById('successMessage').style.display = 'block';
                 document.getElementById('factoringForm').reset();
-                document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
-                
-                // Hide success message after 6 seconds
+
+                submitted = false;
+
                 setTimeout(() => {
                     document.getElementById('successMessage').style.display = 'none';
-                    submitted = false;
                 }, 6000);
-            }).catch(() => {
-                // Even if there's an error, show success (because of no-cors mode)
-                document.getElementById('successMessage').style.display = 'block';
-                document.getElementById('factoringForm').reset();
-                submitted = false;
-            });
-            
-            return false;
-        });
+            }
+        };
     </script>
+
 </body>
 </html>
