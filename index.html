@@ -391,22 +391,33 @@
     </div>
 
     <!-- ⭐ FIXED MOBILE-SAFE SUBMISSION SCRIPT ⭐ -->
-    <script>
-        let submitted = false;
+  <script>
+let submitted = false;
 
-        document.getElementById('hidden_iframe').onload = function () {
-            if (submitted) {
-                document.getElementById('successMessage').style.display = 'block';
-                document.getElementById('factoringForm').reset();
+document.getElementById('hidden_iframe').onload = function () {
+    if (submitted) {
+        // Show success message
+        const msg = document.getElementById('successMessage');
+        msg.style.display = 'block';
 
-                submitted = false;
+        // Scroll to top so the user sees the confirmation
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
 
-                setTimeout(() => {
-                    document.getElementById('successMessage').style.display = 'none';
-                }, 6000);
-            }
-        };
-    </script>
+        // Reset the form
+        document.getElementById('factoringForm').reset();
+        submitted = false;
+
+        // Hide confirmation after 6 seconds
+        setTimeout(() => {
+            msg.style.display = 'none';
+        }, 6000);
+    }
+};
+</script>
+
 
 </body>
 </html>
